@@ -13,7 +13,7 @@ function initializeGame() {
   for (let i = 0; i < dimX; i++) {
     board[i] = [];
     for (let j = 0; j < dimY; j++) {
-      board[i][j] = ' ';
+      board[j] = [];
     }
   }
 }
@@ -59,23 +59,23 @@ function handleClick(event) {
   // TODO: Task 2 A
   // Implement the conditions when the board should be expanded.
   // Ie when the player clicks the extreme rows or columns.
-  /* 
-    if (x === 0 ) {
+   
+   /*  if (x === 0 ) {
         expandBoard('LEFT');
     }
-    else if ( x === ) {
+    else if ( x === dimX ) {
         expandBoard('RIGHT');
     }
-    if ( ) {
+    if ( y === 0  ) {
         expandBoard('UP');
     }
-    else if ( ) {
+    else if (y === dimY ) {
         expandBoard('DOWN');
     }
-    */
+
 
   nextTurn();
-}
+} */
 
 function createSquare(boardDiv, x, y) {
   let element = document.createElement('div');
