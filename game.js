@@ -42,6 +42,19 @@ function expandBoard(direction) {
   // This function adds a column or a row to the board
   // depending on the direction it gets as an argument.
 
+  if (direction == 'LEFT') {
+    dimX -= 1;
+  }
+  if (direction == 'RIGHT') {
+    dimX += 1;
+  }
+  if (direction == 'UP') {
+    dimX -= 1;
+  }
+  if (direction == 'DOWN') {
+    dimX += 1;
+  }
+
   drawBoard();
 }
 
@@ -59,23 +72,20 @@ function handleClick(event) {
   // TODO: Task 2 A
   // Implement the conditions when the board should be expanded.
   // Ie when the player clicks the extreme rows or columns.
-   
-   /*  if (x === 0 ) {
-        expandBoard('LEFT');
-    }
-    else if ( x === dimX ) {
-        expandBoard('RIGHT');
-    }
-    if ( y === 0  ) {
-        expandBoard('UP');
-    }
-    else if (y === dimY ) {
-        expandBoard('DOWN');
-    }
 
+  if (x === 0) {
+    expandBoard('LEFT');
+  } else if (x === dimX) {
+    expandBoard('RIGHT');
+  }
+  if (y === 0) {
+    expandBoard('UP');
+  } else if (y === dimY) {
+    expandBoard('DOWN');
+  }
 
   nextTurn();
-} */
+}
 
 function createSquare(boardDiv, x, y) {
   let element = document.createElement('div');
